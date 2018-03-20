@@ -23,6 +23,7 @@
       background-image: url(../images/components/playerStatsCard/badges_sprite.png); 
       background-repeat: no-repeat;
       background-color: transparent;
+      background-position: 70px 70px;
       width: 70px;
       height: 70px;
       border-radius: 100px;
@@ -93,12 +94,14 @@
   }
 
   &__name {
+    height: 24px;
     @include text;
     color: white;
     font-size: 22px;
   }
 
   &__position {
+    height: 18px;
     margin-top: 9px;
     margin-bottom: 14px;
     @include text;

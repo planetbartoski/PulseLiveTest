@@ -33,6 +33,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
+    <!-- main -->
     <main>
 
       <!-- Player Stats Card -->
@@ -42,38 +43,39 @@
             <select>
               <option value="-1">Select a player...</option>
             </select>
-            <img class="playerStatsCard__photo" src="images/components/playerStatsCard/p4916.png" alt="Player photo"/>
-            <div class="playerStatsCard__badge playerStatsCard__badge-11"></div>
+            <img class="playerStatsCard__photo"/>
+            <div class="playerStatsCard__badge"></div>
           </div>
         </div>
         <div class="playerStatsCard__bottom">
-          <div class="playerStatsCard__name">Toby Alderweireld</div>
-          <div class="playerStatsCard__position">Defender</div>
+          <div class="playerStatsCard__name"></div>
+          <div class="playerStatsCard__position"></div>
           <div class="playerStatsCard__stats playerStatsCard__appearances">
             <span class="playerStatsCard__label">Appearances</span>
-            <span class="playerStatsCard__value">80</span>
+            <span class="playerStatsCard__value"></span>
           </div>
           <div class="playerStatsCard__stats playerStatsCard__goals">
             <span class="playerStatsCard__label">Goals</span>
-            <span class="playerStatsCard__value">5</span>
+            <span class="playerStatsCard__value"></span>
           </div>
           <div class="playerStatsCard__stats playerStatsCard__assists">
             <span class="playerStatsCard__label">Assists</span>
-            <span class="playerStatsCard__value">2</span>
+            <span class="playerStatsCard__value"></span>
           </div>
           <div class="playerStatsCard__stats playerStatsCard__goalsPerMatch">
             <span class="playerStatsCard__label">Goals per match</span>
-            <span class="playerStatsCard__value">0.06</span>
+            <span class="playerStatsCard__value"></span>
           </div>
           <div class="playerStatsCard__stats playerStatsCard__passesPerMinute">
             <span class="playerStatsCard__label">Passes per minute</span>
-            <span class="playerStatsCard__value">0.26</span>
+            <span class="playerStatsCard__value"></span>
           </div>
         </div>
       </section>
       <!-- /Player Stats Card -->
 
     </main>
+    <!-- /main -->
 
 
     <!-- footer -->
@@ -83,10 +85,12 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/fetch/fetch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+      <script src="scripts/vendor/babel-polyfill.min.js"></script>
       <script src="scripts/classes/Component.js"></script>
       <script src="scripts/classes/PlayerStatsCard.js"></script>
       <script src="scripts/main.js"></script>
