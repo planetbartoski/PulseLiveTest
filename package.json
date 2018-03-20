@@ -4,9 +4,9 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "babel-core": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.5.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.2.1",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
@@ -41,6 +41,13 @@
         2,
         "single"
       ]
+    },
+    "parserOptions":{
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
     }
+  },
+  "dependencies": {
   }
 }
