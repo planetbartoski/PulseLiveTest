@@ -1,10 +1,9 @@
-console.log('App Started');
+// wait for the DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
 
-    // // init components
-    // $(window).on('initComponents', (e, $container) => {
-    //     if ($container && $container.container ) {
-    //         $container = $container.container;
-    //     }
+  // js is available, remove the nojs class
+  document.querySelector('.nojs').classList.remove('nojs');
 
   // init all of the components
-  PlayerStatsCard.init();
+  PlayerStatsCard.init();  
+});
