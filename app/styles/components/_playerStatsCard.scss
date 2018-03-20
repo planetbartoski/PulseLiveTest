@@ -1,17 +1,129 @@
 .playerStatsCard {
   width: 300px;
-  height: 600px;
   background-color: white;
 
+  .nojs & {
+    display: none;
+  }
+
+  &__badge {
+    position: absolute;
+    right: 0;
+    bottom: -47px;
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+  
+    &:after {
+      content:''; 
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      background-image: url(../images/components/playerStatsCard/badges_sprite.png); 
+      background-repeat: no-repeat;
+      background-color: transparent;
+      width: 70px;
+      height: 70px;
+      border-radius: 100px;
+    }
+  }
+
+  &__badge-1:after {
+    background-position: -70px -70px;
+    border-radius: 25px;
+  }
+
+  &__badge-11:after {
+    background-position: -560px -490px;
+  }
+
+  &__badge-12:after {
+    background-position: -420px -560px;
+  }
+
+  &__badge-21:after {
+    background-position: -350px -700px;
+  }
+
+  &__badge-26:after {
+    background-position: 0 0;
+  }
+
+  &__topWrapper {
+    padding: 14px 16px 0 16px;
+    background: url(../images/components/playerStatsCard/backgroundPattern.png) no-repeat right bottom 6px transparent;
+  }
+
   &__top {
-    height: 300px;
-    width: 100%
+    position: relative;
+    height: 295px;
+
+    select {
+      height: 40px;
+      width: 100%;
+      padding: 0 30px 0 14px;
+      color: black;
+      border: none;
+
+      @include text;
+
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      appearance:none;
+      background: url(../images/icons/arrow-down.png) no-repeat right 10px center $colour-gray;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+  }
+
+  &__photo {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
   }
 
   &__bottom {
-    height: 305px;
-    width: 100%;
+    padding: 16px 14px 16px 14px;
     background-color: $colour-red;
   }
 
+  &__name {
+    @include text;
+    color: white;
+    font-size: 22px;
+  }
+
+  &__position {
+    margin-top: 9px;
+    margin-bottom: 14px;
+    @include text;
+    color: white;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+
+    @include text;
+    color: $colour-purple;
+    background-color: $colour-gray;
+
+    padding-left: 10px;
+    padding-right: 12px;
+    margin-top: 2px;
+
+    box-shadow: 0px 0px 8px 0px gray;
+  }
+
+  &__value {
+    font-weight: bold;
+  }
 }

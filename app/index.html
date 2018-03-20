@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="">
+<html lang="en" class="nojs">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PulseLive</title>
+    <title>PulseLive Code Test</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -20,20 +20,66 @@
     
   </head>
   <body>
+
+    <!-- header -->
+    <header></header>
+    <!-- /header -->
+
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
     <main>
 
-      <section class="playerStatsCard" api-endpoint="">
-        <div class="playerStatsCard__top">
+      <!-- Player Stats Card -->
+      <section class="playerStatsCard" data-api-endpoint="api/player-stats.json" data-stand-alone="true">
+        <div class="playerStatsCard__topWrapper">
+          <div class="playerStatsCard__top">
+            <select>
+              <option value="-1">Select a player...</option>
+            </select>
+            <img class="playerStatsCard__photo" src="images/components/playerStatsCard/p4916.png" alt="Player photo"/>
+            <div class="playerStatsCard__badge playerStatsCard__badge-11"></div>
+          </div>
         </div>
         <div class="playerStatsCard__bottom">
+          <div class="playerStatsCard__name">Toby Alderweireld</div>
+          <div class="playerStatsCard__position">Defender</div>
+          <div class="playerStatsCard__stats playerStatsCard__appearances">
+            <span class="playerStatsCard__label">Appearances</span>
+            <span class="playerStatsCard__value">80</span>
+          </div>
+          <div class="playerStatsCard__stats playerStatsCard__goals">
+            <span class="playerStatsCard__label">Goals</span>
+            <span class="playerStatsCard__value">5</span>
+          </div>
+          <div class="playerStatsCard__stats playerStatsCard__assists">
+            <span class="playerStatsCard__label">Assists</span>
+            <span class="playerStatsCard__value">2</span>
+          </div>
+          <div class="playerStatsCard__stats playerStatsCard__goalsPerMatch">
+            <span class="playerStatsCard__label">Goals per match</span>
+            <span class="playerStatsCard__value">0.06</span>
+          </div>
+          <div class="playerStatsCard__stats playerStatsCard__passesPerMinute">
+            <span class="playerStatsCard__label">Passes per minute</span>
+            <span class="playerStatsCard__value">0.26</span>
+          </div>
         </div>
       </section>
+      <!-- /Player Stats Card -->
 
     </main>
+
+
+    <!-- footer -->
+    <footer></footer>
+    <!-- /footer -->
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -41,9 +87,9 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/classes/Component.js"></script>
-    <script src="scripts/classes/PlayerStatsCard.js"></script>
-    <script src="scripts/main.js"></script>
+      <script src="scripts/classes/Component.js"></script>
+      <script src="scripts/classes/PlayerStatsCard.js"></script>
+      <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>

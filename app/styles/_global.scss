@@ -15,4 +15,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 20px;
+}
+
+noscript {
+  display: block;
+  text-align: center;
+  @include text;
+  font-weight: bold;
+  margin: 30px auto;
 }
